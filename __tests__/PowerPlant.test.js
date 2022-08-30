@@ -1,17 +1,6 @@
-import { difference, coinCounter, reset, quarters, dimes, nickels, pennies } from './../src/coinCounter.js';
-
-describe('difference', () => {
-  test('Should return the difference between the input and the next greatest whole number, times 100', () => {
-    const change = difference(4.99); 
-    expect(change).toEqual(1); 
-  });
-});
+import {stateControl, changeState, storeState}   from '../src/PowerPlant.js';
 
 describe('coinCounter', () => {
-
-  afterEach(() => {
-    reset();
-  });
 
   test('Should return coinArray if change is equal to zero', () => {
     let changeArray = coinCounter(0);
